@@ -121,3 +121,30 @@ void insertion_sort(int arr[], int len){
         }
 }
 ```
+```
+快速排序
+template <typename T>
+void quick_sort_recursive(T arr[], int start, int end) {
+    if (start >= end)
+        return;
+    T mid = arr[end];
+    int left = start, right = end - 1;
+    while (left < right) { //在整个范围内搜寻比枢纽元值小或大的元素，然后将左侧元素与右侧元素交换
+        while (arr[left] < mid && left < right) //试图在左侧找到一个比枢纽元更大的元素
+            left++;
+        while (arr[right] >= mid && left < right) //试图在右侧找到一个比枢纽元更小的元素
+            right--;
+        std::swap(arr[left], arr[right]); //交换元素
+    }
+    if (arr[left] >= arr[end])
+        std::swap(arr[left], arr[end]);
+    else
+        left++;
+    quick_sort_recursive(arr, start, left - 1);
+    quick_sort_recursive(arr, left + 1, end);
+}
+template <typename T> //整數或浮點數皆可使用,若要使用物件(class)時必須設定"小於"(<)、"大於"(>)、"不小於"(>=)的運算子功能
+void quick_sort(T arr[], int len) {
+    quick_sort_recursive(arr, 0, len - 1);
+}
+```
