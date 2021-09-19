@@ -83,18 +83,24 @@ func(n)
 
 ![1*j8FHj5GEC1rnMCS-rZ5W3g](https://user-images.githubusercontent.com/9456917/133919779-df182e71-e79f-4484-9424-195bb52f412b.png)
 
+https://cooervo.github.io/Algorithms-DataStructures-BigONotation/big-O-notation.html
+
+https://www.bigocheatsheet.com
+
+<img width="793" alt="Screen Shot 2021-09-19 at 6 01 57 PM" src="https://user-images.githubusercontent.com/9456917/133923410-44423211-8524-4396-a694-9f6dbf2cab5b.png">
+
 常用排序算法
 - 冒泡排序O(N²)：一轮比较相邻的，然后交换（n-1次），从第一个元素开始，比较2个数哪个更大，交换2个数的位置以使它们按顺序排列。(N-1)+(N-2)+(N-3)+...+1次比较.处理N个元素，需要n²步（比较+交换）。
 - 选择排序O(N²/2)-->O(N²)：一轮比较全部的，然后交换（1次），从第一个元素开始，逐次与后面的对比大小，直到最后一个元素，期间第一轮找到的最小元素与索引0交换，然后从第二元素开始找最小元素并与交换索引1。直到最后一个元素。(N-1)+(N-2)+(N-3)+...+1次比较,但是每轮交换最多只有1次
 - 插入排序O(N²+N)-->O(N²)：对于未排序数据，在已排序序列中依次从后向前扫描，直到找到该数字大于已排序的位置并插入
 - 快速排序：
 
-	
-	
-插入排序
+```
+             最好情况       平均情况       最坏情况
+插入排序      O(N)             O(N²)        O(N²)  
 
-快速排序
-
+快速排序      O(N*log N)     O(N*log N)    O(N²)
+```
 ```
 冒泡排序
 void bubbleSort (int arr[], int len)
