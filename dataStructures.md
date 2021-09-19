@@ -195,3 +195,25 @@ void quick_sort(T arr[], int len) {
     quick_sort_recursive(arr, 0, len - 1);
 }
 ```
+```
+快速选择
+function quickSelection(nums, s, e, k) {
+    let i = s, j = e;
+    // move random chosen value to index s.
+    const rk = Math.floor(s + Math.random() * (e - s + 1));
+    [nums[s], nums[rk]] = [nums[rk], nums[s]];
+    const p = nums[s]; 
+    // start move i, j until i >= j, and after loop, i will be filled with p value.
+    while (i < j) {
+        while (i < j && nums[j] >= p) j--;
+        nums[i] = nums[j];
+        while (i < j && nums[i] <= p) i++;
+        nums[j] = nums[i];
+    }
+    nums[i] = p;
+    const pk = i - s + 1;
+    if (pk == k) return nums[i];
+    if (pk > k) return quickSelection(nums, s, i - 1, k);
+    else return quickSelection(nums, i + 1, e, k - pk);
+}
+```
