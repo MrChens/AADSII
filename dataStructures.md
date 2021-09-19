@@ -53,4 +53,71 @@
 - 选择排序O(N²/2)-->O(N²)：一轮比较全部的，然后交换（1次），从第一个元素开始，逐次与后面的对比大小，直到最后一个元素，期间第一轮找到的最小元素与索引0交换，然后从第二元素开始找最小元素并与交换索引1。直到最后一个元素。(N-1)+(N-2)+(N-3)+...+1次比较,但是每轮交换最多只有1次
 - 插入排序O(N²+N)-->O(N²)：对于未排序数据，在已排序序列中依次从后向前扫描，直到找到该数字大于已排序的位置并插入
 - 快速排序：
-- 
+
+```
+冒泡排序
+void bubbleSort (int arr[], int len)
+{
+
+	int i, j,temp;
+	_Bool exchanged = true;
+	
+	for (i=0; exchanged && i<len-1; i++){  /* 外迴圈為排序趟數，len個數進行len-1趟,只有交換過,exchanged值為true才有執行迴圈的必要,否則exchanged值為false不執行迴圈 */
+        exchanged = false;
+		for (j=0; j<len-1-i; j++) 
+		{                                    /* 內迴圈為每趟比較的次數，第i趟比較len-i次  */
+			if (arr[j] > arr[j+1])
+			{                                  /* 相鄰元素比較，若逆序則互換（升序為左大於右，逆序反之） */
+				temp = arr[j];
+				arr[j] = arr[j+1];
+				arr[j+1] = temp;
+				exchanged = true;                /*只有數值互換過, exchanged才會從false變成true,否則數列已經排序完成,exchanged值仍然為false,沒必要排序 */
+			}
+       }
+    }
+}
+```
+
+```
+选择排序
+void selection_sort(int a[], int len) 
+{
+    int i,j,temp;
+
+	for (i = 0 ; i < len - 1 ; i++) 
+    {
+		int min = i;
+		for (j = i + 1; j < len; j++)     //走訪未排序的元素
+		{
+			if (a[j] < a[min])    //找到目前最小值
+			{
+				min = j;    //紀錄最小值
+			}
+		}
+		if(min != i)
+		{
+		  temp=a[min];  //交換兩個變數
+		  a[min]=a[i];
+		  a[i]=temp;
+		}
+	   	/* swap(&a[min], &a[i]);  */   //做交換
+	}
+}
+
+```
+
+```
+插入排序
+void insertion_sort(int arr[], int len){
+        int i,j,key;
+        for (i=1;i!=len;++i){
+                key = arr[i];
+                j=i-1;
+                while((j>=0) && (arr[j]>key)) {
+                        arr[j+1] = arr[j];
+                        j--;
+                }
+                arr[j+1] = key;
+        }
+}
+```
