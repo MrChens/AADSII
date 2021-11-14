@@ -4,6 +4,10 @@
 > - 是否高效
 > - 是否容易实现
 
+
+- 大O时间复杂度表示法:大 O 时间复杂度实际上并不具体表示代码真正的执行时间，而是`表示代码执行时间随数据规模增长的变化趋势`，所以，也叫作渐进时间复杂度（asymptotic time complexity），简称时间复杂度
+  - 我们在分析一个算法、一段代码的时间复杂度的时候，也只关注循环执行次数最多的那一段代码就可以了
+
 # The RAM Model of Computation
 
 There are three desirable properties for a good algorithm. We seek algorithms that are **correct** and **efficient**, while being **easy** to implement.
