@@ -12,6 +12,10 @@
 - 空间复杂度全称就是渐进空间复杂度（asymptotic space complexity），表示算法的存储空间与数据规模之间的增长关系
   - 
 
+
+![Unknown1](https://user-images.githubusercontent.com/9456917/141667945-b226dea3-3167-45f7-a538-9bd42f5d8c57.png)
+
+
 # The RAM Model of Computation
 
 There are three desirable properties for a good algorithm. We seek algorithms that are **correct** and **efficient**, while being **easy** to implement.
