@@ -15,6 +15,10 @@
 
 ![Unknown1](https://user-images.githubusercontent.com/9456917/141667945-b226dea3-3167-45f7-a538-9bd42f5d8c57.png)
 
+- 最好情况时间复杂度（best case time complexity）
+- 最坏情况时间复杂度（worst case time complexity）
+- 平均情况时间复杂度（average case time complexity）
+- 均摊时间复杂度（amortized time complexity）
 
 # The RAM Model of Computation
 
