@@ -15,10 +15,10 @@
 
 ![Unknown1](https://user-images.githubusercontent.com/9456917/141667945-b226dea3-3167-45f7-a538-9bd42f5d8c57.png)
 
-- 最好情况时间复杂度（best case time complexity）
-- 最坏情况时间复杂度（worst case time complexity）
-- 平均情况时间复杂度（average case time complexity）
-- 均摊时间复杂度（amortized time complexity）
+- 最好情况时间复杂度（best case time complexity）:在最理想的情况下，执行这段代码的时间复杂度。
+- 最坏情况时间复杂度（worst case time complexity）:在最糟糕的情况下，执行这段代码的时间复杂度。
+- 平均情况时间复杂度（average case time complexity）:这个值就是概率论中的加权平均值，也叫作期望值，所以平均时间复杂度的全称应该叫加权平均时间复杂度或者期望时间复杂度
+- 均摊时间复杂度（amortized time complexity）:对一个数据结构进行一组连续操作中，大部分情况下时间复杂度都很低，只有个别情况下时间复杂度比较高，而且这些操作之间存在前后连贯的时序关系，这个时候，我们就可以将这一组操作放在一块儿分析，看是否能将较高时间复杂度那次操作的耗时，平摊到其他那些时间复杂度比较低的操作上。而且，在能够应用均摊时间复杂度分析的场合，一般均摊时间复杂度就等于最好情况时间复杂度
 
 # The RAM Model of Computation
 
