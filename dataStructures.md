@@ -1,7 +1,8 @@
 # 基础数据结构
 
-[labuladong的算法小抄](https://labuladong.gitbook.io/algo/)
-[Algorithm](https://nicodechal.github.io/tags/#Algorithm)
+- [labuladong的算法小抄](https://labuladong.gitbook.io/algo/)
+- [Algorithm](https://nicodechal.github.io/tags/#Algorithm)
+- [wangzheng0822](https://github.com/wangzheng0822/algo)
 
 
 - 数组：具有随机访问的特点。在内存中划分出一些连续的空格子以备使用。内存中的每个格子都有自己的地址。
